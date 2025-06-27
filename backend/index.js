@@ -13,7 +13,7 @@ const port=process.env.PORT;
 
 
 app.use(cors({
-    origin:"http://localhost:5173",
+    origin:"https://chat-on-adgw.onrender.com",
     credentials:true
 })) 
 app.use(express.json()); // for parsing application/json

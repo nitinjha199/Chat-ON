@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom'
 
 import {Provider} from "react-redux"
 import { store } from './redux/store.js'
-export const serverURL="http://localhost:8000"
+export const serverURL="https://chat-on-backend-j3cp.onrender.com"
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
   <Provider store={store}> {/* provider jo hai wo har jagah store se jo dataaaya hai usko pahuchata hai  aur store ek attribute hota hai usko store ke through store ka data denge*/}

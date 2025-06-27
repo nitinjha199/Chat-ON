@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Login from './pages/Login.jsx';
 import Signup from './pages/Signup.jsx';
-import getCurrentUser from './customHooks/getcurrentuser.jsx';
+import getCurrentUser from './customHooks/Getcurrentuser.jsx';
 import { useDispatch, useSelector } from 'react-redux';
 import Home from './pages/Home.jsx';
 import Profile from './pages/Profile.jsx';

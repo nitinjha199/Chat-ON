@@ -1,12 +1,13 @@
 import multer from "multer"
 
-const storage=multer.diskStorage({
-    destination:(req,file,cb)=>{
-        cb(null,"./public")
-    },
-    filename:(req,file,cb)=>{
-        cb(null,file.originalname)
-    }
-})
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, "/tmp"); // No need to create this manually
+  },
+  filename: (req, file, cb) => {
+    cb(null, Date.now() + "-" + file.originalname);
+  },
+});
+
 
 export const upload=multer({storage})

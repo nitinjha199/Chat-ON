@@ -16,7 +16,9 @@ const useGetOtherUsers=()=>{
                console.log(error)
             }
         }
-            fetchUser();
+            if (userData) {
+    fetchUser(); // ✅ only fetch when user is logged in
+  }
         },[userData])
 }
 

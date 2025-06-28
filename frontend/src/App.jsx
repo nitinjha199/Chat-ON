@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Login from './pages/Login.jsx';
 import Signup from './pages/Signup.jsx';
-import getCurrentUser from './customHooks/GetCurrentUser.jsx';
+import useGetCurrentUser from './customHooks/GetCurrentUser.jsx';
 import { useDispatch, useSelector } from 'react-redux';
 import Home from './pages/Home.jsx';
 import Profile from './pages/Profile.jsx';
@@ -12,7 +12,7 @@ import {io} from "socket.io-client"
 import { serverURL } from './main.jsx';
 
 const App = () => {
-  getCurrentUser();
+  useGetCurrentUser();
   getOtherUsers();
 
   const { userData,socket,onlineUsers } = useSelector(state => state.user);

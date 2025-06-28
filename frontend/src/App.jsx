@@ -6,14 +6,14 @@ import useGetCurrentUser from './customHooks/GetCurrentUser.jsx';
 import { useDispatch, useSelector } from 'react-redux';
 import Home from './pages/Home.jsx';
 import Profile from './pages/Profile.jsx';
-import getOtherUsers from './customHooks/GetotherUsers.jsx';
+import useGetOtherUsers from './customHooks/GetotherUsers.jsx';
 import { setOnlineUsers,setSocket } from './redux/user.slice.js';
 import {io} from "socket.io-client"
 import { serverURL } from './main.jsx';
 
 const App = () => {
   useGetCurrentUser();
-  getOtherUsers();
+  useGetOtherUsers();
 
   const { userData,socket,onlineUsers } = useSelector(state => state.user);
   const dispatch = useDispatch();
